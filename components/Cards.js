@@ -129,7 +129,7 @@ const articlesObject = {
 // Use your function to create a card for each of the articles, and append each card to the DOM.
 import axios from 'axios';
 axios
-    .get('https://lambda-times-api.herokuapp.com/articles')
+    .get(Object.values('https://lambda-times-api.herokuapp.com/articles'))
     .then( res => {
         const topicData = res.data
         cardPlacement.append(cardCreator(object))
