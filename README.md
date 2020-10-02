@@ -27,15 +27,16 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+document object model
 
 2. What is an event?
-
+what happens when a browser manipulates a page
 3. What is an event listener?
-
+tracking a users event
 4. Why would we convert a NodeList into an Array?
-
+because array is the way to access it. 
 5. What is a component?
-
+independent reusable bits of code that works in isolation and returns HTML via rendered function
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
@@ -58,6 +59,14 @@ You are expected to be able to answer questions in these areas. Your responses c
 - [ ] Run `npm start` to compile the project and serve it
 - [ ] Navigate Chrome to the URL indicated in the output of the `npm start` command
 
+articlesData.forEach((articlesObj) => {
+    const articleComponent = cardCreator(articlesObj.authorPhoto, articlesObj.authorName, articlesObj.headline);
+    console.log(articleComponent)
+    const cardPlacement = document.querySelector('.card-container')
+    cardPlacement.appendChild(cardCreator())
+})
+
+  accordion.appendChild(panelComponent);
 ### Task 2: Project Requirements
 
 Your finished project must include all of the following requirements:
